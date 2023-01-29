@@ -12,6 +12,9 @@ function getPost(numOfPost) {
 
     if (Number.isNaN(numOfPost)) {
         resalt.textContent = "Incorrect data. Type a number please";
+        btnComments.setAttribute('hidden', 'hidden');
+        forComents.textContent = '';
+        resalt.style = "color: red; margin-top: 1rem";
     } else {
         fetch(`https://jsonplaceholder.typicode.com/posts/${numOfPost}`)
             .then(response => {
@@ -21,7 +24,7 @@ function getPost(numOfPost) {
                 throw new Error('Does not exist');
             })
             .then(data => {
-                console.log(data);
+
                 let title = data.title;
                 let body = data.body;
                
@@ -39,7 +42,12 @@ function getPost(numOfPost) {
                 forComents.textContent = '';
                 
             })
-            .catch(() =>  resalt.textContent = "Does not exist" );
+            .catch(() => {
+                resalt.textContent = "A post with this number does not exist";
+                forComents.textContent = '';
+                btnComments.setAttribute('hidden', 'hidden');
+                resalt.style = "color: red; margin-top: 1rem";
+            });
     }
 }
 
