@@ -1,0 +1,23 @@
+{
+  "name": "hw20-promise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "server": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArthurKorablev/HW20-Promise.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArthurKorablev/HW20-Promise/issues"
+  },
+  "homepage": "https://github.com/ArthurKorablev/HW20-Promise#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
